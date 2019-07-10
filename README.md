@@ -4,7 +4,7 @@
 
 - `git clone` this repo
 - `npm install` in terminal
-- `npm run dev` in terminal
+- `npm run start:dev` in terminal
 - click [this](http://localhost:3000/) to open in browser
 
 ## requirements
