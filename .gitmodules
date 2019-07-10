@@ -1,0 +1,3 @@
+[submodule "services/music-player"]
+	path = services/music-player
+	url = https://github.com/sosacloud/music-player-service
