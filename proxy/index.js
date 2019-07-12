@@ -26,23 +26,22 @@ app.use('/api/songs/:id', (req, res) => {
 //   req.pipe(request(url)).pipe(res);
 // });
 
-// sidebar-service
+// sidebar-service: tracks
 app.use('/api/track/:id', (req, res) => {
-  // console.log('THIS IS ID', req.params.id);
   const url = `http://localhost:3002/api/track/${req.params.id}`;
   req.pipe(request(url)).pipe(res);
 });
 
+// sidebar-service: users
 app.use('/api/user/:user_name', (req, res) => {
-  // console.log('THIS IS ID', req.params.id);
   const url = `http://localhost:3002/api/user/:user_name/${
     req.params.user_name
   }`;
   req.pipe(request(url)).pipe(res);
 });
 
+// sidebar-service: likes
 app.use('/api/track/likes/:track_id', (req, res) => {
-  // console.log('THIS IS ID', req.params.id);
   const url = `http://localhost:3002/api/track/likes/${req.params.track_id}`;
   req.pipe(request(url)).pipe(res);
 });
