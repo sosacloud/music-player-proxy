@@ -26,12 +26,26 @@ app.use('/api/songs/:id', (req, res) => {
 //   req.pipe(request(url)).pipe(res);
 // });
 
-// // sidebar-service
-// app.use('/api/songs/:id', (req, res) => {
-//   // console.log('THIS IS ID', req.params.id);
-//   const url = `http://localhost:3002/???/${req.params.id}`;
-//   req.pipe(request(url)).pipe(res);
-// });
+// sidebar-service
+app.use('/api/track/:id', (req, res) => {
+  // console.log('THIS IS ID', req.params.id);
+  const url = `http://localhost:3002/api/track/${req.params.id}`;
+  req.pipe(request(url)).pipe(res);
+});
+
+app.use('/api/user/:user_name', (req, res) => {
+  // console.log('THIS IS ID', req.params.id);
+  const url = `http://localhost:3002/api/user/:user_name/${
+    req.params.user_name
+  }`;
+  req.pipe(request(url)).pipe(res);
+});
+
+app.use('/api/track/likes/:track_id', (req, res) => {
+  // console.log('THIS IS ID', req.params.id);
+  const url = `http://localhost:3002/api/track/likes/${req.params.track_id}`;
+  req.pipe(request(url)).pipe(res);
+});
 
 const PORT = process.env.PORT || 3000;
 
