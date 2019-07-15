@@ -20,11 +20,17 @@ app.use('/api/songs/:id', (req, res) => {
   req.pipe(request(url)).pipe(res);
 });
 
-// // comments-service
-// app.use('/api/songs/:id', (req, res) => {
-//   const url = `http://localhost:3001/???/${req.params.id}`;
-//   req.pipe(request(url)).pipe(res);
-// });
+// comments-service: get comments
+app.use('/comments/init', (req, res) => {
+  const url = `http://localhost:3001/comments/init`;
+  req.pipe(request(url)).pipe(res);
+});
+
+// comments-service: post comments
+app.use('/comments/new', (req, res) => {
+  const url = `http://localhost:3001/comments/new`;
+  req.pipe(request(url)).pipe(res);
+});
 
 // sidebar-service: tracks
 app.use('/api/track/:id', (req, res) => {
@@ -34,9 +40,7 @@ app.use('/api/track/:id', (req, res) => {
 
 // sidebar-service: users
 app.use('/api/user/:user_name', (req, res) => {
-  const url = `http://localhost:3002/api/user/:user_name/${
-    req.params.user_name
-  }`;
+  const url = `http://localhost:3002/api/user/${req.params.user_name}`;
   req.pipe(request(url)).pipe(res);
 });
 
