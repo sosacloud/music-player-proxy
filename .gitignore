@@ -44,3 +44,5 @@ yarn-error.log*
 !.vscode/launch.json
 !.vscode/extensions.json
 
+# docker
+docker-compose.yml
