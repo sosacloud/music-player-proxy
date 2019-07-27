@@ -50,6 +50,12 @@ app.use('/api/track/likes/:track_id', (req, res) => {
   request(url).pipe(res);
 });
 
+// sidebar-service: playlists
+app.use('/api/playlists/:track_id', (req, res) => {
+  const url = `http://localhost:3002/api/playlists/${req.params.track_id}`;
+  request(url).pipe(res);
+});
+
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
