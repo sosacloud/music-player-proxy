@@ -44,15 +44,21 @@ app.use('/api/user/:user_name', (req, res) => {
   request(url).pipe(res);
 });
 
+// sidebar-service: playlists
+app.use('/api/playlists/:track_id', (req, res) => {
+  const url = `http://localhost:3002/api/playlists/${req.params.track_id}`;
+  request(url).pipe(res);
+});
+
 // sidebar-service: likes
 app.use('/api/track/likes/:track_id', (req, res) => {
   const url = `http://localhost:3002/api/track/likes/${req.params.track_id}`;
   request(url).pipe(res);
 });
 
-// sidebar-service: playlists
-app.use('/api/playlists/:track_id', (req, res) => {
-  const url = `http://localhost:3002/api/playlists/${req.params.track_id}`;
+// sidebar-service: reposts
+app.use('/api/track/reposts/:track_id', (req, res) => {
+  const url = `http://localhost:3002/api/track/reposts/${req.params.track_id}`;
   request(url).pipe(res);
 });
 
