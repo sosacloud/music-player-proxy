@@ -3,10 +3,6 @@
   "version": "1.0.0",
   "description": "proxy server for SoundCloud clone services",
   "main": "./dist/index.html",
-  "engines": {
-    "node": ">= 12.6.0",
-    "npm": ">= 6.10.1"
-  },
   "scripts": {
     "start:dev": "nodemon proxy/index.js",
     "start": "node proxy/index.js"
