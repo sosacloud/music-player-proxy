@@ -2,14 +2,12 @@
 
 ## try it out!
 
-- `git clone` this repo
-- `npm install` in terminal
-- `npm run start:dev` in terminal
-- click [this](http://localhost:3000/) to open in browser
+- check out the proxy [here](http://ec2-54-193-104-28.us-west-1.compute.amazonaws.com) :smiley:
 
 ## requirements
 
-#### a proxy server for SoundCloud clone services, where:
+#### a proxy server for three SoundCloud services, where:
 
-- three services render onto one page using respective nodes
-- data displays on the client according to a song's unique ID
+- each service renders on a single page using respective nodes
+- song data displays on the client with unique database record IDs
+- Docker && AWS EC2 both handle deployment of proxy server
