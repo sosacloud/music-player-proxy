@@ -16,7 +16,9 @@ app.use(express.static(path.join(__dirname, '../dist')));
 
 // music-player-service
 app.use('/api/songs/:id', (req, res) => {
-  const url = `http://localhost:3003/api/songs/${req.params.id}`;
+  const url = `http://ec2-13-56-150-152.us-west-1.compute.amazonaws.com/api/songs/${
+    req.params.id
+  }`;
   request(url).pipe(res);
 });
 
