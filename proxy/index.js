@@ -36,31 +36,41 @@ app.use('/comments/new', (req, res) => {
 
 // sidebar-service: tracks
 app.use('/api/track/:id', (req, res) => {
-  const url = `http://localhost:3002/api/track/${req.params.id}`;
+  const url = `http://relatedtracks-env2.hjpjmvifc3.us-west-2.elasticbeanstalk.com/api/track/${
+    req.params.id
+  }`;
   request(url).pipe(res);
 });
 
 // sidebar-service: users
 app.use('/api/user/:user_name', (req, res) => {
-  const url = `http://localhost:3002/api/user/${req.params.user_name}`;
+  const url = `http://relatedtracks-env2.hjpjmvifc3.us-west-2.elasticbeanstalk.com/api/user/${
+    req.params.user_name
+  }`;
   request(url).pipe(res);
 });
 
 // sidebar-service: playlists
 app.use('/api/playlists/:track_id', (req, res) => {
-  const url = `http://localhost:3002/api/playlists/${req.params.track_id}`;
+  const url = `http://relatedtracks-env2.hjpjmvifc3.us-west-2.elasticbeanstalk.com/api/playlists/${
+    req.params.track_id
+  }`;
   request(url).pipe(res);
 });
 
 // sidebar-service: likes
 app.use('/api/track/likes/:track_id', (req, res) => {
-  const url = `http://localhost:3002/api/track/likes/${req.params.track_id}`;
+  const url = `http://relatedtracks-env2.hjpjmvifc3.us-west-2.elasticbeanstalk.com/api/track/likes/${
+    req.params.track_id
+  }`;
   request(url).pipe(res);
 });
 
 // sidebar-service: reposts
 app.use('/api/track/reposts/:track_id', (req, res) => {
-  const url = `http://localhost:3002/api/track/reposts/${req.params.track_id}`;
+  const url = `http://relatedtracks-env2.hjpjmvifc3.us-west-2.elasticbeanstalk.com/api/track/reposts/${
+    req.params.track_id
+  }`;
   request(url).pipe(res);
 });
 
