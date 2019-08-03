@@ -34,14 +34,6 @@ app.use('/comments/new', (req, res) => {
   request(url).pipe(res);
 });
 
-// sidebar-service: tracks
-app.use('/api/track/:id', (req, res) => {
-  const url = `http://relatedtracks-env2.hjpjmvifc3.us-west-2.elasticbeanstalk.com/api/track/${
-    req.params.id
-  }`;
-  request(url).pipe(res);
-});
-
 // sidebar-service: users
 app.use('/api/user/:user_name', (req, res) => {
   const url = `http://relatedtracks-env2.hjpjmvifc3.us-west-2.elasticbeanstalk.com/api/user/${
@@ -70,6 +62,14 @@ app.use('/api/track/likes/:track_id', (req, res) => {
 app.use('/api/track/reposts/:track_id', (req, res) => {
   const url = `http://relatedtracks-env2.hjpjmvifc3.us-west-2.elasticbeanstalk.com/api/track/reposts/${
     req.params.track_id
+  }`;
+  request(url).pipe(res);
+});
+
+// sidebar-service: tracks
+app.use('/api/track/:id', (req, res) => {
+  const url = `http://relatedtracks-env2.hjpjmvifc3.us-west-2.elasticbeanstalk.com/api/track/${
+    req.params.id
   }`;
   request(url).pipe(res);
 });
